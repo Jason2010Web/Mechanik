@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mechanik</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            /* .Codefenster{
+                background-color: white;
+                color: black;
+                font-size: 2vh;
+                font-family: "Tektur";
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                height: 100vh;
+                width: 100vw;
+                text-align: center;
+            }
+            .Codefenster p{
+                display: inline-block;
+                width: 50vh;
+            }
+            .codefenster{
+                height: 20vh;
+                width: 30vh;
+                background-color: #83ff99;
+                border-radius: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                margin-top: -20vh;
+            }
+            .codefenster input{
+                font-size: 2vh;
+                padding-inline: 0.5vh;
+                height: 3vh;
+                width: calc(100% - 40%);
+                border-radius: 0.5vh;
+                border: 0;
+                outline: 0;
+            } */
+            /* .Webseitencontent{
+                display: none;
+            } */
+            
+        </style>
+    </head>
+    <body>
+        <!-- <div class="Codefenster">
+            <p>Diese Webseite wird für den pivaten Gebrau genutzt. <br> Daher ist sie nicht für jeden zugänglich und du musst erst deinen personalisierten Code in das Codefenster eingeben, um zur Hauptwebseite zu gelangen und die Funktionen freizuschalten.</p>
+            <div class="codefenster">
+                <p>Bitte Passwort eingeben:</p>
+                <input class="passwordfield" oninput="checkPassword()" type="text" value="admin@Jason.Web!">
+            </div>
+        </div> -->
+        <div class="Webseitencontent">
+            <div class="top" id="header"></div>
+            <header>
+                <h1>Mechanik</h1>
+            </header>
+            <div class="content">
+
+                <section class="links">
+                    <h2>Übersicht:</h2>
+                        <a href="#Physikalische_Größen" onclick="scrollMitOffset(event)">Physikalische Größen</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Volumen">Volumen</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Masse">Masse</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Dichte">Dichte</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Geschwindigkeit">Geschwindigkeit</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Schallgeschwindigkeit">Schallgeschwindigkeit</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Beschleunigng">Beschleunigng</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Fallbeschleunigung">Fallbeschleunigung</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Kraft">Kraft</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Radialkraft">Radialkraft</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Reibungskräfte">Reibungskraft</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Normalkraft">Normalkraft</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Auflagedruck">Druck</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Zentrifugalkraft">Zentrifugalkraft</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Gravitationskraft">Gravitationskraft</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Auftriebskraft">Auftriebskraft</>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Strömungswiderstand">Strömungswiderstand</>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Impuls">Impuls</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#mechanische_Arbeit">mechanische Arbeit</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#mechanische_Energie">mechanische Energie</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#mechanische_Leistung">mechanische Leistung</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Wirkungsgrad">Wirkungsgrad</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Wellenlänge">Wellenlänge</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Lautstärke">Lautstärke</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Frequenz">Frequenz</a>
+                        <a onclick="scrollMitOffset(event)" href="#Aufbau_der_Stoffe_aus_Teilchen">Aufbau der Stoffe aus Teilchen</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Teilchenmodel">Teilchenmodel</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Diffusion">Diffusion</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Kohäsion_und_Adhäsion">Kohäsion und Adhäsion</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Aggregatszustände">Aggregatszustände</a>
+                        <a onclick="scrollMitOffset(event)" href="#Bewegung_von_Körpern">Bewegung von Körpern</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Bezugssystem/-Körper">Bezugssysteme/-Körper</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Model_Massepunkt">Model Massepunkt</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Formen_von_Bewegungen">Formen von Bewegungen</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Arten_von_Bewegungen">Arten von Bewegungen</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Überlagerung_von_Bewegungen">Überlagerung von Bewegungen</a>
+                        <a onclick="scrollMitOffset(event)" href="#Kräfte_und_ihre_Wirkungen">Kräfte und ihre Wirkungen</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Wirkungen_von_Kräften">Wirkungen von Kräften</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#newtonsche_Gesetze">newtonsche Gesetze</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Schwerpunkt_von_Körpern">Schwerpunkt von Körpern</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Standfestigkeit_von_Körpern">Standfestigkeit von Körpern</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Überlagerung_von_Kräften">Überlagerung von Kräften</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Kraftumformende_Einrichtungen">Kraftumformende Einrichtungen</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Hebel">Hebel</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#geneigte_Ebenen">geneigte Ebenen</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Rollen">Rollen</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#goldene_Regel_der_Mechanik">goldene Regel der Mechanik</a>
+                        <a onclick="scrollMitOffset(event)" href="#mechanische_Schwingungen_und_Wellen">mechanische Schwingungen und Wellen</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Schwingungen">Schwingungen</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Resonanz">Resonanz</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Federschwinger_und_Fadenpendel">Federschwinger und Fadenpendel</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Wellen">Wellen</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Schall">Schall</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink_" href="#Echolot">Echolot</a>
+                        <a onclick="scrollMitOffset(event)" href="#Mechanik_der_Flüssigkeiten_und_Gase">Mechanik der Flüssigkeiten und Gase</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#hydraulische_Anlagen">hydraulische Anlagen</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#Schweredruck_in_Flüssigkeiten">Schweredruck in Flüssigkeiten</a>
+                        <a onclick="scrollMitOffset(event)" class="Zwischenlink" href="#strömende_Flüssigkeiten_und_Gase">strömende Flüssigkeiten und Gase</a>
+                </section>
+
+
+                <!-- <section class="Beispiel" id="Beispiel">
+                    <div class="anchor"></div>
+                    <h2>Überschrift</h2>
+                    <h3>Teilüberschrift</h3>
+                    <table class="Tabelle_Beispiel">
+                        <tr>
+                            <th>Spalte1</th>
+                            <th class="last_one_Beispiel">Spalte2</th>
+                        </tr>
+                        <tr>
+                            <td>etwas Text</td>
+                            <td class="last_one_Beispiel">etwas anderer Text</td>
+                        </tr>
+                        <tr>
+                            <td class="last_row_Beispiel">etwas anderer Text</td>
+                            <td class="last_one_Beispiel last_row_Beispiel">etwas Text</td>
+                        </tr>
+                    </table>
+                    <p class="Beschreibungstext_Beispiel">Hallo, mein Name ist Jason und ich bin am 11.05.2024 14 Jahre alt geworden. Ich programmiere gerade eine Webseite über das große Thema Mechanik. Das wird sehr lange dauern und anstrengend werden.</p>
+                    <img src="Graphiken/Federkraftmesser.png" class="Bild_Beispiel">
+                    <h3>Teilüberschrift2</h3>
+                    <table class="Tabelle_Beispiel">
+                        <tr>
+                            <th>Spalte1</th>
+                            <th class="last_one_Beispiel">Spalte2</th>
+                        </tr>
+                        <tr>
+                            <td>etwas Text</td>
+                            <td class="last_one_Beispiel">etwas anderer Text</td>
+                        </tr>
+                        <tr>
+                            <td class="last_row_Beispiel">etwas anderer Text</td>
+                            <td class="last_one_Beispiel last_row_Beispiel">etwas Text</td>
+                        </tr>
+                    </table>
+                    <p class="Beschreibungstext_Beispiel">Hallo, mein Name ist Jason und ich bin am 11.05.2024 14 Jahre alt geworden. Ich programmiere gerade eine Webseite über das große Thema Mechanik. Das wird sehr lange dauern und anstrengend werden.</p>
+                    <img src="Graphiken/Federkraftmesser.png" class="Bild_Beispiel">
+                </section> -->
+
+                <!-- <section class="Physikalische_Größen" id="Physikalische_Größen">
+                    <h2>Physikalische Größen</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Formelzeichen</th>
+                            <th class="last_one">Einheitszeichen</th>
+                        </tr>
+                        <tr>
+                            <td>Volumen</td>
+                            <td>V</td>
+                            <td class="last_one">l(Liter), m³(Kubikmeter)...</td>
+                        </tr>
+                        <tr>
+                            <td>Masse</td>
+                            <td>m</td>
+                            <td class="last_one">g(Gramm)...</td>
+                        </tr>
+                        <tr>
+                            <td>Dichte</td>
+                            <td>&#1009;</td>
+                            <td class="last_one">kg/m³(Kilgramm pro Kubikmeter)...</td>
+                        </tr>
+                        <tr>
+                            <td>Geschwindigkeit</td>
+                            <td>v</td>
+                            <td class="last_one">km/h(Kilometer pro Stunde)...</td>
+                        </tr>
+                        <tr>
+                            <td>Beschleunigung</td>
+                            <td>a</td>
+                            <td class="last_one">m/s²(Meter pro Quadratsekunde)...</td>
+                        </tr>
+                    </table>
+                </section> -->
+
+                <section class="Physikalische_Größen" id="Physikalische_Größen">
+                    <div class="anchor"></div>
+                    <h2>Physikalische Größen</h2>
+
+                    <div  id="Volumen" class="anchor"></div>
+                    <h3>Volumen(V):</h3>
+                    <p><b>Einheiten:</b> <br> Liter(l), Kubikmeter(m³), Kubikzentimeter(cm³)...</p>
+                    <p><b>Umrechnungen:</b> <br> 1m³ = 1000l <br> 1cm³ = 1ml</p>
+                    <p><b>Messen:</b></p>
+                    <p>flüssige, gasförmige Stoffe: Durchflusszähler</p>
+                    <img  src="Graphiken/Durchflusszähler.png" alt="Durchflusszähler">
+                    <p>pulverförmige Stoffe: Messzylinder</p>
+                    <img src="Graphiken/Messzylinder.png" alt="Messzylinder">
+                    <p>unregelmäßig geformte, feste Stoffe: Überlaufmethode oder Differenzmethode</p>
+                    <img src="Graphiken/Überlaufmethode.png" alt="Überlaufmethode">
+                    oder
+                    <img src="Graphiken/Differenzmethode.png" alt="Differenzmethode">
+
+                    <div  id="Masse" class="anchor"></div>
+                    <h3>Masse(m)</h3>
+                    <p><b>Eihneiten:</b> <br> g(Gramm), kg(Kilogramm)...</p>
+                    <p><b>Messen:</b> <br> mit jeder beliebigen Art von Waage(Küchenwaage, Federwaage, Balkenwaage...)</p>
+                    <img src="Graphiken/Küchenwaage.png" alt="Küchenwaage">
+                    <img src="Graphiken/Balkenwaage.png" alt="Balkenwaage">
+
+                    <div  id="Dichte" class="anchor"></div>
+                    <h3>Dichte(&#1009;)</h3>
+                    <p><b>Einheiten:</b> <br> g/cm³(Gramm pro Kubikzentimeter), kg/m³(Kilogramm pro Kubikmeter)</p>
+                    <p><b>Messen:</b> <br> mit Dichtemessern(Aräometer)</p>
+                    <img src="Graphiken/Aräometer.png" alt="Aräometer">
+                    <p><b>Berechnen:</b> <br> &#1009; = m/V</p>
+
+                    <div  id="Geschwindigkeit" class="anchor"></div>
+                    <h3>Geschwindigkeit(v)</h3>
+                    <p><b>Einheiten:</b> <br> m/s(Meter pro Sekunde), km/h(Kilometer pro Stunde)...</p>
+                    <p><b>Messen:</b> <br> mit einem Geschwindigkeitsmesser(Tachometer)</p>
+                    <img src="Graphiken/Tachometer.png" alt="Tachometer">
+                    <p><b>Berechnen:</b> <br> v = s/t <br>(s = zurückgelegter Weg, t = benötigte Zeit, v = Durchschnittsgeschwindigkeit)</p>
+                    <br>
+                    <p>Die Geschwindigkeit ist eine gerichtete(vektorielle) Größe. Sie hat eine Richtung und einen Betrag.</p>
+
+                    <div  id="Schallgeschwindigkeit" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Schallgeschwindigkeit(v)</h3>
+                    <p style="margin-left: 20px;">Die <b>Schallgeschwindigkeit</b> gibt an, wie schnell sich der Schall ausbreitet.</p>
+                    <p style="margin-left: 20px;"><b>Berechnen:</b><br>v = <span class="symbol">λ</span> * f</p>
+
+                    <div id="Beschleunigung" class="anchor"></div>
+                    <h3>Beschleunigung(a)</h3>
+                    <p><b>Einheiten:</b> <br>m/s²(Meter pro Quadratsekunde), km/s²(Kilometer pro Quadratsekunde)...</p>
+                    <p><b>Berechnen:</b> <br> a = v/t <br>(v = Änderung der Geschwindigkeit, t = Zeitintervall)</p>
+                    <br>
+                    <p>Ein Körper besitzt eine Beschleunigung von 1 m/s², wenn sich seine Geschwindigkeit mit jeder neuen Sekunde um 1 m/s ändert.</p>
+
+                    <div style="margin-left: 20px;"  id="Fallbeschleunigung" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Fallbeschleunigung(g)</h3>
+                    <p style="margin-left: 20px;">Die Fallbeschleunigung ist die Beschleunigung eines frei fallenden Körpers. Auf der Erde beträgt sie im Durchschnitt etwa 9,81 m/s² und auf der Sonne etwa 274 m/s². Sie ist an jedem Ort anders(Ortsfaktor).</p>
+                    <p style="margin-left: 20px;"><b>Gesetze für den freien Fall:</b> <br>Weg-Zeit-Gesetz: s = g/2 * t² <br>Geschwindigkeit-Zeit-Gesetz: v = g * t <br> <p style="margin-top: -9px;margin-left: 20px;">Geschwindigkeit-Weg-Gesetz: v = <span class="root">&radic;<span class="root-content">2 * g * s</span></span></p></p>
+
+                    <div  id="Kraft" class="anchor"></div>
+                    <h3>Kraft(F)</h3>
+                    <p><b>Einheiten:</b><br>N(Newton), MN(Meganewton)...</p>
+                    <br><p>Die Kraft ist, wie die Geschwindigkeit, eine gerichtete(vektorielle) Größe mit einer Richtung, einem Angriffspunkt und einem Betrag. Sie wird mithilfe von Pfeilen daargestellt.</p>
+                    <img src="Graphiken/Kraftpfeil.png" alt="Kraftpfeil">
+                    <p>Kräfte wirken immer auf mindestens zwei Körper gleichzeitig. Daher ist die Kraft eine Wechselwirkungsgröße.</p>
+                    <br><p>Ein Newton ist die Kraft, die einem Körper mit der Masse 1kg eine Beschleunigung von 1 m/s² erteilt.</p>
+                    <p><b>Arten von Kräften:</b></p>
+                    <table class="table">
+                        <tr>
+                            <th>Kraft</th>
+                            <th class="last_one">Beispiel</th>
+                        </tr>
+                        <tr>
+                            <td style="display: flex; flex-direction: column; align-items: center;justify-content: center;">
+                                <!-- <img src="Graphiken/magnetische Kraft.png" alt="Magnetische Kraft"> -->
+                                <p>Magnetische Kraft</p>
+                            </td>
+                            <td class="last_one">Ein Elektromagnet zieht Körper aus Eisen an. Zwischen Magnet und Eisenkörper wirken <b>magnetische Kräfte</b>.</td>
+                        </tr>
+                        <tr>
+                            <td style="display: flex; flex-direction: column; align-items: center;justify-content: center;">
+                                <!-- <img src="Graphiken/elektrische Kraft.png" alt="Elektrische Kraft"> -->
+                                <p>Elektrische Kraft</p>
+                            </td>
+                            <td class="last_one">Ein Kamm wird durch Reibung elektrisch geladen. Zwischen Kamm und Styroporkugeln wirken <b>elektrische Kräfte</b>.</td>
+                        </tr>
+                        <tr>
+                            <td style="display: flex; flex-direction: column; align-items: center;justify-content: center;">
+                                <!-- <img src="Graphiken/Gravitationskraft.png" alt="Gravitationskraft"> -->
+                                <p>Gravitationskraft</p>
+                            </td>
+                            <td class="last_one">Zwischen der Erde und einem Erdsatelliten wirken aufgrund der Massen anziehende Kräfte, die <b>Gravitationskräfte</b>.</td>
+                        </tr>
+                        <tr>
+                            <td style="display: flex; flex-direction: column; align-items: center;justify-content: center;">
+                                <!-- <img src="Graphiken/Gewichtskraft.png" alt="Gewichtskraft"> -->
+                                <p>Gewichtskraft</p>
+                            </td>
+                            <td class="last_one">Jeder Körper wird von der Erde angezogen und übt auf seine Unterlage eine Kraft aus, die man <b>Gewichtskraft</b> nennt: F<sub>G</sub> = m * g.</td>
+                        </tr>
+                        <tr>
+                            <td style="display: flex; flex-direction: column; align-items: center;justify-content: center;">
+                                <!-- <img src="Graphiken/Reibungskraft.png" alt="Reibungskraft"> -->
+                                <p>Reibungskraft</p>
+                            </td>
+                            <td class="last_one">Beim Fahren mit dem Fahrrad wirken immer auch Kräfte, die die Bewegung hemmen. Sie heißen <b>Reibungskräfte</b>.</td>
+                        </tr>
+                        <tr>
+                            <td style="display: flex; flex-direction: column; align-items: center;justify-content: center;">
+                                <!-- <img src="Graphiken/Zugkraft.png" alt="Zugkraft"> -->
+                                <p>Zugkraft</p>
+                            </td>
+                            <td class="last_one">Waggons werden durch eine Lokomotive in Bewegung gesetzt. Dabei wirken auf die Waggons <b>Zugkräfte</b>.</td>
+                        </tr>
+                        <tr>
+                            <td style="display: flex; flex-direction: column; align-items: center;justify-content: center;">
+                                <!-- <img src="Graphiken/Auftriebskraft.png" alt="Auftriebskraft"> -->
+                                <p>Auftriebskraft</p>
+                            </td>
+                            <td class="last_one">Auf Körper in Flüssigkeiten und Gasen wirkt entgegengesetzt zur Gewichtskraft eine volumenabhängige <b>Auftriebskraft</b>.</td>
+                        </tr>
+                        <tr>
+                            <td style="display: flex; flex-direction: column; align-items: center;justify-content: center;">
+                                <!-- <img src="Graphiken/Druckkraft.png" alt="Druckkraft"> -->
+                                <p>Druckkraft</p>
+                            </td>
+                            <td class="last_one">Durch den Luftdruck im Reifen wirkt auf seine Innenfläche eine Kraft, die ihn "in Form hält" und die man <b>Druckkraft</b> nennt.</td>
+                        </tr>
+                        <tr>
+                            <td style="display: flex; flex-direction: column; align-items: center;justify-content: center;" class="last_row">
+                                <!-- <img src="Graphiken/Schubkraft.png" alt="Schubkraft"> -->
+                                <p>Schubkraft</p>
+                            </td>
+                            <td class="last_one last_row">Beim Start einer Rakete werden Verbrennungsgase sehr schnell ausgestoßen. Auf die Rakete wirkt eine <b>Schubkraft</b>.</td>
+                        </tr>
+                    </table>
+                    <p><b>Messen:</b> <br>mit einem Federkraftmesser</p>
+                    <img src="Graphiken/Federkraftmesser.png" alt="Federkraftmesser">
+                    <p style="margin-left: 20px;"><b>Hooksches Gesetz:</b> Unter der Bedingung, dass eine Feder elastisch verformt wird gilt: <br>F ~ s <br> F/s = konstant <br> F = D * s <br>(D = Federkonstante)</p>
+
+
+                    <div id="Radialkraft" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Radialkraft(F<sub>r</sub>)</h3>
+                    <p style="margin-left: 20px;">Die <b>Radialkraft</b> ist die Kraft, die einen Körper, welcher sich auf einer Kreisbahn bewegt, in Richtung des Zentrums seiner Bahn zieht.</p>
+                    <p style="margin-left: 20px;">Bei gleichförmiger Bewegung gilt: <br> F<sub>r</sub> = m * v²/r <br> F<sub>r</sub> = m * (4 * <span class="symbol">π</span>² * r)/T² <br> F<sub>r</sub> = m * 4 * <span class="symbol">π</span>² * r * n² <br>(m = Masse, v = Geschwindigkeit, r = Radius der Kreisbahn, T = Umlaufzeit, n = Drehzahl)</p>
+                
+                    <div  id="Reibungskräfte" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Reibungskraft(F<sub>R</sub>)</h3>
+                    <p style="margin-left: 20px;"><b>Arten:</b> <br> Haftreibung(Ein Körper haftet an einem Anderen und bewegt sich nicht.) <br> Gleitreibung(Ein Körper "schleift" über einen anderen Körper) <br> Rollreibung(Ein Körper rollt auf einem Anderen.)</p>
+                    <br> <p style="margin-left: 20px;">Es gilt bei gleichen Bedingungen: Haftreibung > Gleitreibung > Rollreibung</p>
+                    <p style="margin-left: 20px;"><b>Berechnen:</b> <br> F<sub>R</sub> = <span class="symbol">μ</span> * F<sub>N</sub> <br> (<span class="symbol">μ</span>(Mü) = Reibungszahl, F<sub>N</sub> = Normalkraft)</p>
+
+                    <div  id="Normalkraft" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Normal- bzw. Anpresskraft(F<sub>N</sub>)</h3>
+                    <p style="margin-left: 20px;">Die <b>Normalkraft</b>, oder auch Anpresskraft genannt, ist die Kraft, welche senkrecht auf ihre Unterlage wirkt.</p>
+
+                    <div  id="Drehmoment" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Drehmoment(M)</h3>
+                    <p style="margin-left: 20px;"><b>Einheiten:</b> <br> Nm(Newtonmeter), MNm(Meganewtonmeter)...</p>
+                    <br><p style="margin-left: 20px;">Das Drehmoment beschreibt die Wirkung einer Kraft auf einen drehbar gelagerten Körper.</p>
+                    <img style="margin-left: 40px;" src="Graphiken/Schraubenschlüssel.png" alt="Schraubenschlüssel">
+                    <p style="margin-left: 20px;"><b>Berechnen:</b><br> M = r * F</p>
+                    <p style="margin-left: 20px;"><b>Messen:</b><br>mit einem Drehmomentschlüssel</p>
+                    <img style="margin-left: 40px;" src="Graphiken/Drehmomentschlüssel.png" alt="Drehmomentschlüssel">
+
+                    <div  id="Auflagedruck" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Druck(<span class="symbol">𝑝</span>)</h3>
+                    <p style="margin-left: 20px;"><b>Einheiten:</b><br>Pa(Pascal), kPa(Kilopascal), N/m²(Newton pro Quadratmeter), bar(Bar), Torr(Torr), at(Atmosphäre)...</p>
+                    <p style="margin-left: 20px;"><b>Umrechnungen:</b><br>1Pa = 1 N/m² = 0,0001 N/cm² <br> 1bar = 100000Pa <br>1at = 98,1Pa <br>1Torr = 133,32Pa</p>
+                    <p style="margin-left: 20px;"><b>Berechnen:</b><br>p = F/A <br>(F = wirkende Kraft, A = Auflagefläche)</p>
+                    <p style="margin-left: 20px;"><b>Messen(von Druck in Flüssigkeiten):</b><br></p>
+                    <table style="margin-left: 20px;">
+                        <tr>
+                            <th>Manometer(Druck in einem geschlossenen System)</th>
+                            <th class="last_one">Barometer(Luftdruck)</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>U-Rohr-Manometer</h4>
+                                <img src="Graphiken/U-Rohr-Manometer.png" alt="U-Rohr-Manometer">
+                                <p>Der von der Flüssigkeitssäule der Höhe h ausgeübte Druck ist gleich mit dem Gasdruck.</p>
+                            </td>
+                            <td class="last_one">
+                                <h4>Dosenbarometer</h4>
+                                <img src="Graphiken/Dosenbarometer.png" alt="Dosenbarometer">
+                                <p>Der Luftdruck wirkt auf die Membran einer Luftleeren Dose. Die Verformung der Membran ist ein Maß für den Luftdruck.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;" class="last_row">
+                                <h4>Membranmanometer</h4>
+                                <img src="Graphiken/Membranmanometer.png" alt="Membranmanometer">
+                                <p>Durch den Druck wird die Membran verformt. Damit erfolgt ein Zeigerausschlag.</p>
+                            </td>
+                            <td style="width: 50%;" class="last_one last_row">
+                                <h4>Quecksilberbarometer</h4>
+                                <img src="Graphiken/Quecksilberbarometer.png" alt="Quecksilberbarometer">
+                                <p>Das Quecksilberbarometer ist ein einseitig geschlossenes U-Rohr-Manometer. Der normale Luftdruck entspricht dem Druck einer Quecksilbersäule mit einer Höhe von 760mm</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <p style="margin-left: 20px;">In einem abgeschlossenem Gefäß ist der Druck an jeder Stelle näherungsweise konstant.</p>
+
+                    <div  id="Zentrifugalkraft" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Zentrifugalkraft bzw. Fliehkraft</h3>
+                    <p style="margin-left: 20px;">Die <b>Zentrifugalkraft</b> ist die Kraft, welche einen sich auf einer Kreisbahn bewegenden Körper aus der Bahn nach außen drückt und somit der Radialkraft und der Gravitation entgegenwirkt.</p>
+                    <p style="margin-left: 20px;">Sie ist abhängig von der Geschwindigkeit des Körpers auf der Kreisbahn.</p> <br>
+                    <p style="margin-left: 20px;">Wenn sie <b>größer</b> ist, als die Gravitationskraft, bewegt sich der Körper immer weiter aus der Kreisbahn hinaus. <br> Wenn sie <b>gleichgroß</b> ist, wie die Gravitationskraft, bewegt sich der Körper gleichmäßig auf seiner Kreisbahn weiter. <br> Wenn sie <b>kleiner</b> ist, als die Gravitationskraft, fällt der Körper in Richtung des Zentrums seiner Bahn.</p>
+
+
+                    <div  id="Gravitationskraft" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Gravitationskraft</h3>
+                    <p style="margin-left: 20px;">Die <b>Gravitationskraft</b> ist gleich mit der <b>Gewichtskraft</b>.</p>
+                    <p style="margin-left: 20px;">Außerdem ist sie eine Wechselwirkungskraft. Das heißt, dass sich mehrere Körper immer mit der exakt selben Kraft gegenseitig anziehen.</p>
+                    <br>
+                    <p style="margin-left: 20px;"><b>Berechnen:</b> <br> F = G * (m<sub>1</sub> * m<sub>2</sub>)/r² <br> (F = Gravitationskraft; G = Gravitationskonstante = 6,67430 * 10⁻¹¹ * m³ * kg⁻¹ * s⁻²; m<sub>1</sub>, m<sub>2</sub> = Massen der zwei Körper; r = Abstand der Massenmittelpunkte)</p>
+                
+
+                    <div  id="Auftriebskraft" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Auftriebskraft(F<sub>A</sub>)</h3>
+                    <p style="margin-left: 20px;"><b>Einheiten:</b><br>N(Newton), MN(Meganewton)...</p>
+                    <p style="margin-left: 20px;"><b>Berechnen:</b><br>F<sub>A</sub> = &#1009; * V * g <br>(&#1009; = Dichte des verdrängten Stoffs, V = verdrängtes Volumen, g = Fallbeschleunigung)</p>
+                    <p style="margin-left: 20px;"><b>Sinken, Schweben, Steigen, Schwimmen:</b></p>
+                    <table style="margin-left: 20px;">
+                        <tr>
+                            <th>Sinken</th>
+                            <th>Schweben</th>
+                            <th>Steigen</th>
+                            <th class="last_one">Schwimmen</th>
+                        </tr>
+                        <tr>
+                            <td class="last_row" style="width: 25%;">F<sub>A</sub> < F<sub>G</sub> <br> &  <br>&#1009;<sub>F,G</sub> < &#1009;<sub>Körper</sub></td>
+                            <td class="last_row" style="width: 25%;">F<sub>A</sub> = F<sub>G</sub> <br> &  <br>&#1009;<sub>F,G</sub> = &#1009;<sub>Körper</sub></td>
+                            <td class="last_row" style="width: 25%;">F<sub>A</sub> > F<sub>G</sub> <br> &  <br>&#1009;<sub>F,G</sub> > &#1009;<sub>Körper</sub></td>
+                            <td style="width: 25%;" class="last_one last_row">F<sub>A</sub> = F<sub>G</sub> <br> &  <br>&#1009;<sub>F,G</sub> = &#1009;<sub>Körper</sub> <br> Ein Teil des Körpers befndet sich außerhalb der Flüssigkeit</td>
+                        </tr>
+                    </table>
+                    <p style="margin-left: 20px;">(&#1009;<sub>F,G</sub> = Dichte der verdrängten Flüssigkeit/des verdrängten Gases)</p>
+
+
+                    <div  id="Strömungswiderstand" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Strömungswiderstand(F<sub>W</sub>)</h3>
+                    <p style="margin-left: 20px;"><b>Einheiten:</b> <br>N(Newton), MN(Meganewton)...</p>
+                    <p style="margin-left: 20px;"><b>Berechnen:</b> <br> F<sub>W</sub> = 1/2 * c<sub>W</sub> * A * &#1009; * v² <br>(c<sub>W</sub> = Luftwiderstandszahl, A = umströmte Querschnittsfläche, &#1009; = Dichte der Luft, v = Geschwindigkeit zwischen Körper und Luft)</p>
+                    <p style="margin-left: 20px;"><b>Die Luftwiderstandszahl ist von der Form abhängig:</b></p>
+                    <table style="margin-left: 20px;">
+                        <tr>
+                            <th>Form</th>
+                            <th class="last_one">Luftwiderstandszahl</th>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;">Scheibe</td>
+                            <td style="width: 50%;" class="last_one">1,1</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;">Kugel</td>
+                            <td style="width: 50%;" class="last_one">0,45</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;">Halbkugel</td>
+                            <td style="width: 50%;" class="last_one">0,3 - 0,4</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;">Schale</td>
+                            <td style="width: 50%;" class="last_one">1,3 - 1,5</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;">Stromlinienform</td>
+                            <td style="width: 50%;" class="last_one">0,06</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;" class="last_row">Zylinder</td>
+                            <td style="width: 50%;" class="last_one last_row">0,85</td>
+                        </tr>
+                    </table>
+
+
+                    <div  id="Impuls" class="anchor"></div>
+                    <h3>Impuls(<span class="symbol">p</span>)</h3>
+                    <p><b>Einheiten:</b><br>(kg * m)/s (Kilogramm mal Masse je Sekunde)</p>
+                    <p><b>Berechnen:</b><br>p = m * v</p>
+                    <br><p>Der Impuls beschreibt die Wucht, die ein Körper besitzt.</p>
+                    <br><p>In einem abgeschlossenen System bleibt der Gesamtimpuls erhalten.</p>
+
+
+                    <div  id="mechanische_Arbeit" class="anchor"></div>
+                    <h3>mechanische Arbeit(W)</h3>
+                    <p><b>Einheiten:</b><br>J(Jule), Nm(Newtonmeter)...</p>
+                    <p><b>Berechnen:</b><br>W = F * s * cos<span class="symbol">α</span></p>
+                    <img src="Graphiken/Arbeit berechnen.png" alt="Arbeit berechnen">
+                    <p><b>Arten von mechanischer Arbeit:</b></p>
+                    <table class="table_">
+                        <tr>
+                            <th>Art mit Beschreibung</th>
+                            <th class="last_one">Berechnung</th>
+                        </tr>
+                        <tr>
+                            <td style="display: flex; flex-direction: column; align-items: center;justify-content: center;">
+                                <b>Hubarbeit</b><br>
+                                <!-- <img src="Graphiken/Hubarbeit.png" alt="Hubarbeit"> -->
+                                <p>Wird ein Körper gehoben, so wird <b>Hubarbeit</b> verrichtet.</p>
+                            </td>
+                            <td class="last_one">W = F<sub>G</sub> * h oder W = m * g * h</td>
+                        </tr>
+                        <tr>
+                            <td style="display: flex; flex-direction: column; align-items: center;justify-content: center;">
+                                <b>Verformungsarbeit</b><br>
+                                <!-- <img src="Graphiken/Verformungsarbeit.png" alt="Verformungsarbeit"> -->
+                                <p>Wird ein Körper verformt, so wird <b>Verformungsarbeit</b> verrichtet.</p>
+                            </td>
+                            <td class="last_one">W = 0,5 * F<sub>E</sub> * s oder W = 0,5 * D * s²</td>
+                        </tr>
+                        <tr>
+                            <td style="display: flex; flex-direction: column; align-items: center;justify-content: center;">
+                                <b>Beschleunigungsarbeit</b><br>
+                                <!-- <img src="Graphiken/Beschleunigungsarbeit.png" alt="Beschleunigungsarbeit"> -->
+                                <p>Wird ein Körper beschleunigt, so wird <b>Beschleunigungsarbeit</b> verrichtet.</p>
+                            </td>
+                            <td class="last_one">W = F<sub>B</sub> * s oder W = m * a * s</td>
+                        </tr>
+                        <tr>
+                            <td class="last_row" style="display: flex; flex-direction: column; align-items: center;justify-content: center;">
+                                <b>Reibungsarbeit</b><br>
+                                <!-- <img src="Graphiken/Reibungsarbeit.png" alt="Reibungsarbeit"> -->
+                                <p>Wirken Reibungskräfte auf einen Körper und hemmen seine Bewegung, wird <b>Reibungsarbeit</b> verrichtet.</p>
+                            </td>
+                            <td class="last_one last_row">W = F<sub>R</sub> * s oder W = <span class="symbol">μ</span> * F<sub>N</sub> * s </td>
+                        </tr>
+                    </table>
+
+                    <div  id="mechanische_Energie" class="anchor"></div>
+                    <h3>mechanische Energie(E<sub>mech</sub>)</h3>
+                    <p><b>Einheiten:</b><br>J(Jule), Nm(Newtonmeter)...</p>
+                    <p><b>Umrechnen:</b><br>1 J = 1 Nm</p>
+                    <p><b>Formen mechanischer Energie:</b></p>
+                    <table class="table_">
+                        <tr>
+                            <th>Potenzielle Energie(E<sub>pot</sub>)</th>
+                            <th class="last_one">Kinetische Energie(E<sub>kin</sub>)</th>
+                        </tr>
+                        <tr>
+                            <td class="last_row">
+                                <p>Ein <span style="text-decoration: underline;">gehobener Körper</span> besitzt potenzielle Energie.</p>
+                                <p><b>Berechnen:</b> <br> E<sub>pot</sub> = F<sub>G</sub> * h</p><br>
+                                <p>Eine <span style="text-decoration: underline;">gespannte Feder</span> besitzt potenzielle Energie.</p>
+                                <p><b>Berechnen:</b> <br> E<sub>pot</sub> = 0,5 * F<sub>E</sub> * s oder E<sub>pot</sub> = 0,5 * D * s²</p>
+                            </td>
+                            <td class="last_one last_row">
+                                <p>Ein <span style="text-decoration: underline;">sich bewegender Körper</span> besitzt kinetische Energie.</p>
+                                <p><b>Berechnen:</b> <br> E<sub>kin</sub> = 0,5 * m * v²</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p><b>Zusammenhang mit mechanischer Arbeit:</b><br>Die verrichtete mechanische Arbeit ist die Änderung der Energie(W = <span class="symbol">Δ</span>E)</p>
+                    <br><p>Die mechanische Energie bleibt immer erhalten und kann weder zerstört, noch erschaffen werden.(E<sub>pot</sub> + E<sub>kin</sub>) = konstant</p>
+                
+                    <div  id="mechanische_Leistung" class="anchor"></div>
+                    <h3>mechanische Leistung(P)</h3>
+                    <p><b>Einheiten:</b><br>W(Watt)...</p>
+                    <p><b>Berechnen:</b><br> P = W/t <br> und bei gleichförmiger Bewegung auch: P = F * v</p>
+                    <br>
+                    <p>Die mechanische Leistung gibt an, wie viel mechanische Arbeit in einem Zeitraum verrichtet wird.</p>
+
+                    <div  id="Wirkungsgrad" class="anchor"></div>
+                    <h3>Wirkungsgrad(<span class="symbol">η</span>)</h3>
+                    <p><b>Einheiten:</b><br>1 oder (%)</p>
+                    <p><b>Berechnen:</b><br><span class="symbol">η</span> = E<sub>nutz</sub>/ E<sub>auf</sub> <br><span class="symbol">η</span> = W<sub>nutz</sub>/ W<sub>auf</sub> <br><span class="symbol">η</span> = P<sub>nutz</sub>/ P<sub>auf</sub><br> <br>(P<sub>nutz</sub>,W<sub>nutz</sub>,E<sub>nutz</sub> = nutzbringende Leistung,Arbeit,Energie) <br> (P<sub>auf</sub>,W<sub>auf</sub>,E<sub>auf</sub> = aufgewendete Leistung,Arbeit,Energie)</p>
+                    <p>Der Wirkungsgrad gibt an, welcher Anteil der aufgewendeten Energie/Arbeit/Leistung in nutzbringende umgewandelt wird.</p>
+
+                    <div  id="Wellenlänge" class="anchor"></div>
+                    <h3>Wellenlänge(<span class="symbol">λ</span>)</h3>
+                    <p><b>Einheiten:</b><br>m(Meter), mm(Millimeter)...</p>
+                    <p><b>Berechnen:</b><br><span class="symbol">λ</span> = v / f <br>(f = Frequenz, v = Ausbreitungsgeschwindigkeit)</p>
+                    <br><p>Die Wellenlänge ist der Abstand zweier Schwinger im selben Schwingungszustand.</p>
+
+
+                    <div  id="Lautstärke" class="anchor"></div>
+                    <h3>Lautstärke(L)</h3>
+                    <p><b>Einheiten:</b><br>phon(Phon), dB(Dezibel)...</p>
+                    <p><b>Messen:</b><br>mit Schallpegelmessern</p>
+                    <img src="Graphiken/Schallpegelmesser.png" alt="Schallpegelmesser">
+
+                    <div  id="Frequenz" class="anchor"></div>
+                    <h3>Frequenz(f)</h3>
+                    <p><b>Einheiten:</b>Hz(Hertz), kHz(Kilohertz)...</p>
+                    <p><b>Berechnen der Frequenz in einer offenen Luftsäule:</b><br> f = v/(2 * l) <br>(v = Schallgeschwindigkeit, l = Länge der Luftsäule)</p>
+                    <p><b>Berechnen der Frequenz in einer geschlossenen Luftsäule:</b><br> f = v/(4 * l) <br>(v = Schallgeschwindigkeit, l = Länge der Luftsäule)</p>
+                    <br>
+                    <p>Die <b>Frequenz</b> in Hz gibt an, wie viele Perioden einer Schwingung pro Sekunde stattfinden.</p>
+                </section>
+
+                <section class="Aufbau_der_Stoffe_aus_Teilchen">
+                    <div  id="Aufbau_der_Stoffe_aus_Teilchen" class="anchor"></div>
+                    <h2>Aufbau der Stoffe aus Teilchen</h2>
+
+                    <div  id="Teilchenmodel" class="anchor"></div>
+                    <h3>Teilchenmodel</h3>
+                    <p>Das <b>Teilchenmodel</b> erklärt den Aufbau von Stoffen und stellt die einzelnen Teilchen(Atome, Moleküle) dar.</p>
+                    <img src="Graphiken/Teilchenmodel.png" alt="Teilchenmodel">
+                    <br><p>Jeder Stoff besteht aus diesen winzigen Teilchen, welche sich in ständiger Bewegung befinden. Je nach Aggregatszustand bewegen sie sich auf unterschiedliche Weisen. Zwischen allen Teilchen wirken anziehende u. abstoßende Kräfte, egal ob mit den Teilchen des selben Stoffs, oder mit anderen.</p>
+
+                    <div  id="Diffusion" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Diffusion</h3>
+                    <p style="margin-left: 20px;">Durch die ständige Bewegung der einzelnen Teilchen in einem Stoff kann es sein, dass sich zwei verschiedene Stoffe(flüssig oder gasförmig) automatisch vermischen. Diesen Prozess nennt man <b>Diffusion</b>.</p>
+
+
+                    <div  id="Kohäsion_und_Adhäsion" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Kohäsion und Adhäsion</h3>
+                    <p style="margin-left: 20px;">Wenn sich mehrere Teilchen des <em><b>selben</b></em> Stoffs gegenseitig anziehen, nennt man das <b>Kohäsion</b>.</p>
+                    <p style="margin-left: 20px;">Wenn sich mehrere Teilchen <em><b>unterschiedlicher</b></em> Stoffe gegenseitig anziehen, nennt man das <b>Adhäsion</b>.</p>
+
+                    <div  id="Aggregatszustände" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Aggregatszustände</h3>
+                    <p style="margin-left: 20px;">Es gibt viele verschiedene Aggregatszustände, aber die am häufigsten zu findenden von ihnen sind die Aggregatszustände <b>fest</b>, <b>flüssig</b>, <b>gasförmig</b>. Diese drei unterscheiden sich vor allem in ihem Form- und Volumenverhalten.</p>
+                    <table style="margin-left: 40px;">
+                        <tr>
+                            <th style="width: 25%;">Aggregatszustand</th>
+                            <th style="width: 25%;">Aufbau</th>
+                            <th style="width: 25%;">Form</th>
+                            <th style="width: 25%;" class="last_one">Volumen</th>
+                        </tr>
+                        <tr>
+                            <td>fest</td>
+                            <td>Teilchen schwingen um ihren eigenen Platz hin und her</td>
+                            <td>bestimmte Form</td>
+                            <td class="last_one">bestimmtes Volumen, kann nicht zusammengedrückt werden</td>
+                        </tr>
+                        <tr>
+                            <td>flüssig</td>
+                            <td>Teilchen bewegen sich unregelmäßig, sind gegeneinander verschiebbar</td>
+                            <td>passt sich der Form des Gefäßes an</td>
+                            <td class="last_one">bestimmtes Volumen, kann nicht zusammengedrückt werden</td>
+                        </tr>
+                        <tr>
+                            <td class="last_row">gasförmig</td>
+                            <td class="last_row">Teilchen bewegen sich frei im Raum umher</td>
+                            <td class="last_row">passt sich der Form des Gefäßes an</td>
+                            <td class="last_one last_row">nimmt den ganzen Raum ein, welcher zur Verfügung steht, lassen sich zusammendrücken <br>--> veränderliches Volumen</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section class="Bewegung_von_Körpern">
+                    <div  id="Bewegung_von_Körpern" class="anchor"></div>
+                    <h2>Bewegung von Körpern</h2>
+
+                    <div id="Bezugssystem/-Körper" class="anchor"></div>
+                    <h3>Bezugssystem/-körper</h3>
+                    <p>Ein <b>Bezugssystem</b> oder ein <b>Bezugskörper</b> ist wichtig um zu bestimmen, ob sich ein Körper bewegt, oder nicht. Wenn er seine Lage gegenüber seines Bezugssystems oder Bezugskörpers ändert, so ist er in Bewegung. Tut er das nicht, so steht er still und bewegt sich nicht.</p>
+
+
+                    <div id="Model_Massepunkt" class="anchor"></div>
+                    <h3>Model Massepunkt</h3>
+                    <p>Das Model <b>Massepunkt</b> wird zur Beschreibung von Bewegungen genutzt. Häufig wird der Masseschwerpunkt zur Darstellung genutzt, also der Punkt, an welchem die ganze Masse eines Körpers aufeinander trifft.</p>
+                    <img src="Graphiken/Model Massepunkt.png" alt="Model Massepunkt">
+
+                    <div id="Formen_von_Bewegungen" class="anchor"></div>
+                    <h3>Formen von Bewegungen</h3>
+                    <p><b>Bahnformen:</b></p>
+                    <ul>
+                        <li>
+                            <p>geradlinige Bewegung</p>
+                            <img style="width: 250px;height: 250px;max-width: 20vw;min-width: 10vw;min-height:10vw;max-height:20vw;" src="Graphiken/geradlinige Bewegung.png" alt="geradlinige Bewegung">
+                        </li>
+                        <li>
+                            <p>krummlinige Bewegung</p>
+                            <img style="width: 250px;height: 250px;max-width: 20vw;min-width: 10vw;min-height:10vw;max-height:20vw;" src="Graphiken/krummlinige Bewegung.png" alt="krummlinige Bewegung">
+                        </li>
+                        <li>
+                            <p>Kreisbewegung</p>
+                            <img style="width: 250px;height: 250px;max-width: 20vw;min-width: 10vw;min-height:10vw;max-height:20vw;" src="Graphiken/Kreisbewegung.png" alt="Kreisbewegung">
+                        </li>
+                        <li>
+                            <p>Schwingung</p>
+                            <img style="width: 250px;height: 250px;max-width: 20vw;min-width: 10vw;min-height:10vw;max-height:20vw;" src="Graphiken/Schwingung.png" alt="Schwingung">
+                        </li>
+                    </ul>
+
+                    <div id="Arten_von_Bewegungen" class="anchor"></div>
+                    <h3>Arten von Bewegungen</h3>
+                    <table>
+                        <tr>
+                            <th style="width: 50%;">gleichförmige Bewegung</th>
+                            <th style="width: 50%;" class="last_one">ungleichförmige Bewegung</th>
+                        </tr>
+                        <tr>
+                            <td class="last_row">Ein Körper bewegt sich mit konstanter Geschwindigkeit.</td>
+                            <td class="last_row last_one">Ein Körper bewegt sich mit verändericher Geschwindigkeit.</td>
+                        </tr>
+                    </table>
+
+                    <div id="Überlagerung_von_Bewegungen" class="anchor"></div>
+                    <h3>Überlagerung von Bewegungen</h3>
+                    <p>Bewegungen können sich auch überlagern und damit auch kombinieren. Dies tun sie unabhängig von einander(Unabhängigkeitsprinzip). Man kann die Resultierende Bewegung auch berechnen.</p>
+                    <table style="width: 70%;">
+                        <tr>
+                            <th style="width: 25%;">gleiche Richtung</th>
+                            <th style="width: 25%;">entgegengesetzte Richtung</th>
+                            <th style="width: 25%;">im rechten Winkel zueinander</th>
+                            <th style="width: 25%;" class="last_one">in einem beliebigen anderen Winkel <span class="symbol">&#945;</span> zueinander</th>
+                        </tr>
+                        <tr>
+                            <td class="last_row">
+                                <img src="Graphiken/gleiche Richtung.png" alt="gleiche Richtung">
+                                <p>v = v<sub>1</sub> + v<sub>2</sub></p>
+                            </td>
+                            <td class="last_row">
+                                <img src="Graphiken/entgegengesetzte Richtung.png" alt="entgegengesetzte Richtung">
+                                <p>v = v<sub>1</sub> - v<sub>2</sub></p>
+                            </td>
+                            <td class="last_row">
+                                <img src="Graphiken/im rechten Winkel zueinander.png" alt="im rechten Winkel zueinander">
+                                <p>v = <span class="root">&radic;<span class="root-content">v<sub>1</sub>² + v<sub>2</sub>²</span></span></p>
+                            </td>
+                            <td class="last_row last_one">
+                                <img src="Graphiken/in einem beliebigen anderen Winkel alpha zueinander.png" alt="in einem beliebigen anderen Winkel alpha zueinander">
+                                <p>v = <span class="root">&radic;<span class="root-content">v<sub>1</sub>² + v<sub>2</sub>² + 2 * v<sub>1</sub> * v<sub>2</sub> * cos <span class="symbol">&#945;</span></span></span></p>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section class="Kräfte_und_ihre_Wirkungen">
+                    <div id="Kräfte_und_ihre_Wirkungen" class="anchor"></div>
+                    <h2>Kräfte und ihre Wirkungen</h2>
+
+                    <div id="Wirkungen_von_Kräften" class="anchor"></div>
+                    <h3>Wirkungen von Kräften</h3>
+                    <p>Kräfte können verschiedene Sachen bewirken. Kräfte können die Bewegung und Form eines Körpers verändern.</p>
+
+                    <div id="newtonsche_Gesetze" class="anchor"></div>
+                    <h3>newtonsche Gesetze</h3>
+                    <p><b>Trägheitsgesetz:</b><br>Ein Körper bleibt in Ruhe oder in gleichförmiger geradliniger Bewegung, solange die Summe der auf ihn wirkenden Kräfte null ist.</p>
+                    <p><b>newtonsches Grundgesetz:</b><br>Zwischen Kraft, Masse und Beschleunigng gilt folgender Zusammenhang. <br> F = m * a</p>
+                    <p><b>Wechselwirkungsgesetz:</b><br>Wirken zwei Körper aufeinander ein, so wirk auf jeden der Körper eine Kraft. Die Kräfte sind gleich groß und entgegengesetzt gerichtet.</p>
+                
+                    <div id="Schwerpunkt_von_Körpern" class="anchor"></div>
+                    <h3>Schwerpunkt von Körpern</h3>
+                    <p>Jeder Körper besitzt einen <b>Massemittelpunkt/Schwerpunkt(S)</b>. An diesen Schwerpunkt greifen alle Kräfte an. Er kann auf verschiedene Weisen ermittelt werden. Bei regelmäßig geformten Körpern befindet er sich in der Körpermitte, doch bei unregelmäßig geformten Körpern kann man ihn experimentell ermitteln:</p>
+                    <ul>
+                        <li>man hängt den Körper jeweils an den unkten A,B auf</li>
+                        <li>man markiert die beiden Lote</li>
+                        <li>der Schwerpunkt befindet sich an dem Punkt, an welchem sich die Lote treffen</li>
+                    </ul>
+                    <img src="Graphiken/Lot A.png" alt="Lot A">
+                    <img src="Graphiken/Lot B mit Schwerpunkt(S) ermittelt.png" alt="Lot B mit Schwerpunkt(S) ermittelt">
+
+                    <div id="Standfestigkeit_von_Körpern" class="anchor"></div>
+                    <h3>Standfestigkeit von Körpern</h3>
+                    <p>Ein Körper kann sich in verschiedenen <b>Gleichgewichten</b> befinden:</p>
+                    <table>
+                        <tr>
+                            <th style="width: 33.3%;">stabil</th>
+                            <th style="width: 33.3%;">labil</th>
+                            <th style="width: 33.3%;" class="last_one">nicht im Gleichgewicht</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="Graphiken/stabil.png" alt="stabil">
+                            </td>
+                            <td>
+                                <img src="Graphiken/labil.png" alt="labil">
+                            </td>
+                            <td class="last_one">
+                                <img src="Graphiken/nicht im Gleichgewicht.png" alt="nicht im Gleichgewicht">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="last_row">Ein Körper steht fest auf seiner Auflagefläche.</td>
+                            <td class="last_row">Ein Körper kann bei leichtem Anstoßen in eine Richtung kippen.</td>
+                            <td class="last_row last_one">Ein Körper kippt ohne weitere Kräfte um.</td>
+                        </tr>
+                    </table>
+
+                    <div id="Überlagerung_von_Kräften" class="anchor"></div>
+                    <h3>Überlagerung von Kräften</h3>
+                    <p>Kräfte können sich auch überlagern und damit auch kombinieren. Man kann die Resultierende Kraft auch berechnen.</p>
+                    <table style="width: 70%;">
+                        <tr>
+                            <th style="width: 25%;">gleiche Richtung</th>
+                            <th style="width: 25%;">entgegengesetzte Richtung</th>
+                            <th style="width: 25%;">im rechten Winkel zueinander</th>
+                            <th style="width: 25%;" class="last_one">in einem beliebigen anderen Winkel <span class="symbol">&#945;</span> zueinander</th>
+                        </tr>
+                        <tr>
+                            <td class="last_row">
+                                <img src="Graphiken/gleiche Richtung_F.png" alt="gleiche Richtung_F">
+                                <p>F = F<sub>1</sub> + F<sub>2</sub></p>
+                            </td>
+                            <td class="last_row">
+                                <img src="Graphiken/entgegengesetzte Richtung_F.png" alt="entgegengesetzte Richtung_F">
+                                <p>F = F<sub>1</sub> - F<sub>2</sub></p>
+                            </td>
+                            <td class="last_row">
+                                <img src="Graphiken/im rechten Winkel zueinander_F.png" alt="im rechten Winkel zueinander_F">
+                                <p>F = <span class="root">&radic;<span class="root-content">F<sub>1</sub>² + F<sub>2</sub>²</span></span></p>
+                            </td>
+                            <td class="last_row last_one">
+                                <img src="Graphiken/in einem beliebigen anderen Winkel alpha zueinander_F.png" alt="in einem beliebigen anderen Winkel alpha zueinander_F">
+                                <p>F = <span class="root">&radic;<span class="root-content">F<sub>1</sub>² + F<sub>2</sub>² + 2 * F<sub>1</sub> * F<sub>2</sub> * cos <span class="symbol">&#945;</span></span></span></p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div id="Kraftumformende_Einrichtungen" class="anchor"></div>
+                    <h3>Kraftumformende Einrichtungen</h3>
+
+                    <div id="Hebel" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Hebel</h3>
+                    <p style="margin-left: 20px;">Es gibt zwei Arten von Hebeln. Die <b>einseitigen</b> und <b>zweiseitigen</b> Hebel.</p>
+                    <table style="margin-left: 40px;">
+                        <tr>
+                            <th>einseitig</th>
+                            <th class="last_one">zweiseitig</th>
+                        </tr>
+                        <tr>
+                            <td class="last_row" style="width: 50%;">
+                                <img src="Graphiken/einseitiger Hebel.png" alt="einseitiger Hebel">
+                                <ul style="margin-left: 20px;">
+                                    <li>die Drehachse liegt auf einer Seite</li>
+                                    <li>die Kräfte greifen von der anderen Seite an</li>
+                                    <li>im Gleichgewicht gilt: <br> F<sub>1</sub> * r<sub>1</sub> = F<sub>2</sub> * r<sub>2</sub></li>
+                                </ul>
+                            </td>
+                            <td class="last_row last_one" style="width: 50%;">
+                                <img src="Graphiken/zweiseitiger Hebel.png" alt="zweiseitiger Hebel">
+                                <ul style="margin-left: 20px;">
+                                    <li>die Drehachse liegt zwischen den angreifenden Kräften</li>
+                                    <li>im Gleichgewicht gilt: <br> F<sub>1</sub> * r<sub>1</sub> = F<sub>2</sub> * r<sub>2</sub></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div id="geneigte_Ebenen" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">geneigte Ebenen</h3>
+                    <img style="margin-left: 40px;" src="Graphiken/geneigte Ebene.png" alt="geneigte Ebene">
+                    <p style="margin-left: 20px;">Für <b>geneigte Ebenen</b> gelten die Gleichungen: <br> F<sub>H</sub>/F<sub>G</sub> = h/l <br> F<sub>N</sub>/F<sub>G</sub> = b/l <br> F<sub>H</sub>/F<sub>N</sub> = h/b <br> F<sub>H</sub> = F<sub>G</sub> * sin <span class="symbol">&#945;</span> <br> F<sub>N</sub> = F<sub>G</sub> * cos <span class="symbol">&#945;</span></p>
+                
+                    <div id="Rollen" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Rollen</h3>
+                    <p style="margin-left: 20px;">Es gibt drei Arten von kraftumformenden <b>Rollen</b>. Diese drei Arten sind die festen und losen Rollen und der Flaschenzug.</p>
+                    <table style="margin-left: 20px;">
+                        <tr>
+                            <th style="width: 33.3%;">feste Rolle</th>
+                            <th style="width: 33.3%;">lose Rolle</th>
+                            <th style="width: 33.3%;" class="last_one">Flaschenzug</th>
+                        </tr>
+                        <tr>
+                            <td class="last_row">
+                                <img src="Graphiken/feste Rolle.png" alt="feste Rolle">
+                                <p>F<sub>1</sub> = F<sub>2</sub> <br> & <br> s<sub>1</sub> = s<sub>2</sub></p>
+                            </td>
+                            <td class="last_row">
+                                <img src="Graphiken/lose Rolle.png" alt="lose Rolle">
+                                <p>F<sub>1</sub> = (1/2) * F<sub>2</sub> <br> & <br> s<sub>1</sub> = 2 * s<sub>2</sub></p>
+                            </td>
+                            <td class="last_row last_one">
+                                <img src="Graphiken/lose Rolle.png" alt="lose Rolle">
+                                <p>F<sub>1</sub> = (1/n) * F<sub>2</sub>* <br> & <br> s<sub>1</sub> = n * s<sub>2</sub>* <br>(n = Anzahl der Rollen im Flaschenzug)</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p style="margin-left: 20px;">* Wenn man die Masse der Rollen, Seile und die Reibung vernachlässigen kann.</p>
+
+                    <div id="goldene_Regel_der_Mechanik" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Goldene Regel der Mechanik</h3>
+                    <p style="margin-left: 20px;">Die <b>goldene Regel der Mechanik</b> sagt: <br> <br> Was man an Kraft spart, das muss man an Weg zusetzen.</p>
+                </section>
+
+                <section class="mechanische_Schwingungen_und_Wellen">
+                    <div id="mechanische_Schwingungen_und_Wellen" class="anchor"></div>
+                    <h2>mechanische Schwingungen und Wellen</h2>
+
+                    <div id="Schwingungen" class="anchor"></div>
+                    <h3>Schwingungen</h3>
+                    <p><b>Mechanische Schwingungen</b> sind zeitlich periodische Bewegungen eines Körpers um seine Ruhelage. Mit der Zeit ändert sich der Abstand des Körpers zur Ruhelage, seine Geschwindigkeit, seine Beschleunigung und seine potenzielle und kinetische Energie.</p>
+                    <br><p><b>Vorraussetzungen für eine Schwingung:</b><br></p>
+                    <ul>
+                        <li>ein schwingungsfähiger Körper</li>
+                        <li>eine Auslenkung aus der Ruhelage</li>
+                        <li>eine rücktreibende Kraft</li>
+                    </ul>
+                    <br>
+                    <p><b>Arten von Schwingungen:</b></p>
+                    <ul>
+                        <li>harmonische Schwingung(sinusförmige Schwingung)</li>
+                        <li>nichthormonische Schwingung(nichtsinusförmige Schwingung)</li>
+                        <li>ungedämpfte Schwingung</li>
+                        <li>gedämpfte Schwingung</li>
+                    </ul>
+                    <div id="Resonanz" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Resonanz</h3>
+                    <p style="margin-left: 20px;">Wird einem schwingenden Körper mit einer Erregerfrequenz und im richtigen Rythmus Energie zugeführt, so kann sich seine Amplitude vergrößern. Dieser Fall wird als <b>Resonanz</b> bezeichnet.</p>
+
+                    <div id="Federschwinger_und_Fadenpendel" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Federschwinger und Fadenpendel</h3>
+                    <p style="margin-left: 20px;"><b>Federschwinger:</b></p>
+                    <img style="margin-left: 40px;" src="Graphiken/Federschwinger.png" alt="Federschwinger">
+                    <p style="margin-left: 20px;">Die Schwingdauer eines Federschwingers kann man mit dieser Gleichung berechnen: <br> T = 2 * <span class="symbol">π</span> <span class="root">&radic;<span class="root-content">m/D</span></span></p>
+                    <p style="margin-left: 20px;"><b>Fadenpendel:</b></p>
+                    <img style="margin-left: 40px;" src="Graphiken/Fadenpendel.png" alt="Fadenpendel">
+                    <p style="margin-left: 20px;">Die Schwingdauer eines Fadenpendels kann man mit dieser Gleichung berechnen, wenn die Auslenkung weniger als 15° beträgt: <br> T = 2 * <span class="symbol">π</span> <span class="root">&radic;<span class="root-content">l/g</span></span></p>
+                
+                    <div id="Wellen" class="anchor"></div>
+                    <h3>Wellen</h3>
+                    <p>Mechanische Wellen sind die Ausbreitung von Schwingungen im Raum und sie übertragen Energie, aber keine Stoffe. Es gibt zwei Arten von Wellen. Die Längswellen und Querwellen</p>
+                    <p><b>Längswelle</b>:</p>
+                    <img src="Graphiken/Längswelle.png" alt="Längswelle">
+                    <p><b>Querwelle</b>:</p>
+                    <img src="Graphiken/Querwelle.png" alt="Querwelle">
+                    <br>
+                    <p>Wellen besitzen eine Ausbreitungsgeschwindigkeit, welche man mit dieser Gleichung berechnen kann: <br> v = <span class="symbol">λ</span> * f</p>
+                    <br>
+                    <p>Mechanische Wellen können gebeugt, gebrochen und reflektiert werden.</p>
+                    <p><b>gebeugt:</b></p>
+                    <img src="Graphiken/gebeugt.png" alt="gebeugt">
+                    <p><b>gebrochen:</b></p>
+                    <img src="Graphiken/gebrochen.png" alt="gebrochen">
+                    <p><b>reflektiert:</b></p>
+                    <img src="Graphiken/reflektiert.png" alt="reflektiert">
+                    <br>
+                    <p>Wellen können sich auch überlagern. Die dadurch entstehende Welle(<b>Interferenz</b>) ist die Addition der Ausgangswellen.</p>
+
+                    <div id="Schall" class="anchor"></div>
+                    <h3>Schall</h3>
+                    <p><b>Schall</b> sind mechanische Wellen, die sich als Druckschwankungenin Körpern und Stoffen ausbreiten, also im engeren Sinne alles das, was man mit den Ohren hören kann. Im Durchschnitt können Menschen Frequenzen zwischen 16Hz und 20000Hz wahrnehmen. Alles darunter nennt man <b>Infraschall</b> und alles darüber nennt man <b>Ultraschall</b>. Einige Tiere benutzen Ultraschall, um sich zu orientieren.</p>
+                    <br>
+                    <p><b>Erzeugung von Schall:</b><br>Ein Körper muss in Schwingung versetzt werden.</p>
+                    <br>
+                    <p><b>Arten von Schall:</b></p>
+                    <table>
+                        <tr>
+                            <td>Ton</td>
+                            <td class="last_one">Die Schwingung ist sinusförmig.</td>
+                        </tr>
+                        <tr>
+                            <td>Klang</td>
+                            <td class="last_one">Die Schwingung ist periodisch, aber nicht sinusförmig.</td>
+                        </tr>
+                        <tr>
+                            <td>Geräusch</td>
+                            <td class="last_one">Die Schwingung ist unregelmäßig.</td>
+                        </tr>
+                        <tr>
+                            <td class="last_row">Knall</td>
+                            <td class="last_row last_one">Die Schwingungsamplitude wird mit der Zeit immer kleiner.</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <p>Schall besitzt eine <b>Tonhöhe</b> und eine <b>Lautstärke</b>.</p>
+                    <p>Die <b>Tonhöhe</b> ist davon abhängig, wie schnell ein Körper schwingt. Jegrößer die Frequenz ist, desto höher ist der Ton.</p>
+                    <p>Die <b>Lautstärke</b> ist davon abhängig, mit welcher Amplitude ein Körper schwingt. Je größer die Amplitude der Schwingung eines Körpers ist, umso lauter ist der Ton.</p>
+
+                    <div id="Echolot" class="anchor"></div>
+                    <h3 style="margin-left: 20px;">Echolot</h3>
+                    <p style="margin-left: 20px;">Ein Echolot wird zur Messung von Entfernungen durch Schall genutzt. Um die Entfernung zu berechnen kann man diese Gleichung nutzen: <br> s = (v * t)/2 <br>(v = Schallgeschwindigkeit)</p>
+                    <img style="margin-left: 40px;" src="Graphiken/Echolot.png" alt="Echolot">
+                </section>
+
+
+                <section class="Mechanik_der_Flüssigkeiten_und_Gase">
+                    <div id="Mechanik_der_Flüssigkeiten_und_Gase" class="anchor"></div>
+                    <h2>Mechanik der Flüssigkeiten und Gase</h2>
+
+                    <div id="hydraulische_Anlagen" class="anchor"></div>
+                    <h3>hydraulische Anlagen</h3>
+                    <p><b>Hydraulische Anlagen</b> sind kraftumformende Einrichtungen. Beispiele für hydraulische Anlagen sind hydraulische Hebebühnen und Trommelbremsen.</p>
+                    <br><p><b>Wie funktionieren sie:</b> <br>Bei hydraulischen Anlagen wird mit wenig Kraftaufwand eine Flüssigkeit im dünnen Teil der Anlage nach innen gedrückt. Dadurch, dass Flüssigkeiten nicht komprimiert werden können, muss die Flüssigkeit irgendwo anders hinfließen. Dafür besitzt die Anlage einen breiteren Teil, in welchem die Flüssigkeit mit viel Kraft nach außen drückt.</p>
+                    <img src="Graphiken/hydraulische Anlage.png" alt="hydraulische Anlage">
+                    <p>Es gilt: <br> F<sub>1</sub>/A<sub>1</sub> = F<sub>2</sub>/A<sub>2</sub></p>
+
+
+                    <div id="Schweredruck_in_Flüssigkeiten" class="anchor"></div>
+                    <h3>Schweredruck in Flüssigkeiten</h3>
+                    <p>Da Flüssigkeiten keine interne Struktur besitzen und die einzelnen Atome keinen festen Platz besitzen, drückt nicht die ganze Flüssigkeit in einem Gefäß auf einen Körper, sondern nur der Teil, welcher sich direkt über ihm befindet. Diese Gleichungen gelten für die Berechnung des <b>Schweredrucks</b>: <br>p = F<sub>G</sub>/A <br> p = <span class="symbol">ϱ</span> * g * h</p>
+                    <img src="Graphiken/Schweredruck.png" alt="Schweredruck">
+
+
+                    <div id="strömende_Flüssigkeiten_und_Gase" class="anchor"></div>
+                    <h3>strömende Flüssigkeiten und Gase</h3>
+                    <p>Zur Veranschaulichung von <b>strömenden Flüssigkeiten oder Gasen</b> werden sogenannte Stromlinienbilder verwendet.</p>
+                    <img src="Graphiken/Stromlinienbild.png" alt="Stromlinienbild">
+                    <p><b>Arten von Strömungen:</b></p>
+                    <table>
+                        <tr>
+                            <th style="width: 50%;">laminare Strömungen</th>
+                            <th style="width: 50%;" class="last_one">turbulente Strömungen</th>
+                        </tr>
+                        <tr>
+                            <td class="last_row">
+                                <img src="Graphiken/laminare Strömung.png" alt="laminare Strömung">
+                            </td>
+                            <td class="last_one last_row">
+                                <img src="Graphiken/turbulente Strömung.png" alt="turbulente Strömung">
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <p>Bei allen strömenden Flüssigkeiten und Gasen gilt das <b>Bernoullische Gesetz</b>. Dieses sagt, dass die Dichte des strömenden Stoffes umso kleiner wird, je schneller er fließt.</p>
+                </section>
+
+            </div>
+        </div>
+
+        <a href="#header"><div class="to_top">
+            <span class="symbol">&#8686;</span>
+        </div></a>
+
+        <script>
+            function scrollMitOffset(event){
+                event.preventDefault()
+                var zielElement = document.querySelector(event.target.getAttribute('href'))
+                var offsetPosition = zielElement.offsetTop - 140
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                })
+            }
+        </script>
+    </body>
+</html>
