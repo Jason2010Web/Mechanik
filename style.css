@@ -306,6 +306,19 @@ h3{
         margin-left: 20px;
         margin-right: 20px;
     }
+    @media screen and (orientation: portrait){
+        .table{
+            margin-left: 00px;
+
+            td, th{
+                font-size: 0.6rem;
+            }
+        }
+        .table_{
+            margin-left: 0;
+            
+        }
+    }
 
 }
 
@@ -367,6 +380,19 @@ h3{
         margin-left: 20px;
         margin-right: 20px;
     }
+    @media screen and (orientation: portrait){
+        .table{
+            margin-left: 00px;
+
+            td, th{
+                font-size: 0.6rem;
+            }
+        }
+        .table_{
+            margin-left: 0;
+            
+        }
+    }
 }
 
 .Kräfte_und_ihre_Wirkungen{
@@ -426,6 +452,19 @@ h3{
         margin-bottom: 20px;
         margin-left: 20px;
         margin-right: 20px;
+    }
+    @media screen and (orientation: portrait){
+        .table{
+            margin-left: 00px;
+
+            td, th{
+                font-size: 0.6rem;
+            }
+        }
+        .table_{
+            margin-left: 0;
+            
+        }
     }
 }
 
@@ -487,6 +526,19 @@ h3{
         margin-left: 20px;
         margin-right: 20px;
     }
+    @media screen and (orientation: portrait){
+        .table{
+            margin-left: 00px;
+
+            td, th{
+                font-size: 0.6rem;
+            }
+        }
+        .table_{
+            margin-left: 0;
+            
+        }
+    }
 }
 
 .Mechanik_der_Flüssigkeiten_und_Gase{
@@ -546,5 +598,18 @@ h3{
         margin-bottom: 20px;
         margin-left: 20px;
         margin-right: 20px;
+    }
+    @media screen and (orientation: portrait){
+        .table{
+            margin-left: 00px;
+
+            td, th{
+                font-size: 0.6rem;
+            }
+        }
+        .table_{
+            margin-left: 0;
+            
+        }
     }
 }
